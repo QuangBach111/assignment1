@@ -27,18 +27,16 @@ CREATE TABLE contents
 );
 
 INSERT INTO users(user_name, email, password)
-VALUES ('bach', 'bach@gmail.com', '1234')
+VALUES ('member', 'member@gmail.com', '1234');
 
 INSERT INTO contents (title, brief, content, user_id)
-VALUES ('Sign of Four, The', 'Fusce consequat.',
-        'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.',
+VALUES ('Sign of Four, The', 'Fuse consequent.',
+        'Morbid portion lorem id ligula. Suspense ornare consequent lectures. In est rises, actor sed, tristique in, tempus sit amet, sem.',
         1),
-       ('Lone Wolf and Cub', 'Praesent id massa id nisl venenatis lacinia.',
-        'Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit.', 1),
-
-       ('Chop Shop', 'Integer tincidunt ante vel ipsum.',
-        'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.',
+       ('Lone Wolf and Cub', 'Present id massa id nil venenatis niacin.',
+        'Praesent bandit lacinia erat. Vestibule sed magna at nun common placer. Praesent bandit.', 1),
+       ('Chop Shop', 'Integer incident ante vel ipsum.',
+        'Risque port volute erat. Risque erat eros, riviera get, congue get, sempre rut-rum, nulla. Nun purus.',
         1),
-
-       ('Courage Under Fire', 'Duis consequat dui nec nisi volutpat eleifend.',
-        'Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh.', 1);
+       ('Courage Under Fire', 'Dis consequat dui nec nisei volute effendi.',
+        'Nulla mollies molest lorem. Risque ut erat. Curability gravid nisei at nibh.', 1);
