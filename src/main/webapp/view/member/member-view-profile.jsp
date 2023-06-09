@@ -10,7 +10,7 @@
 <head>
 	<title>Title</title>
 	<%--	library--%>
-	<%@include file="/common/lib-header" %>
+	<%@include file="/common/lib-headergit" %>
 </head>
 <body>
 <div class="container-fluid">
