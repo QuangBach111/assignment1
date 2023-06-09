@@ -12,6 +12,7 @@
   <head>
     <%@include file="../lib-header.jsp"%>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/vendor/css/navbar.css">
+    <title>Guess Navigation Bar</title>
   </head>
   <body>
   <div class="container-fluid">
@@ -31,6 +32,7 @@
             <a class="dropdown-item" href="register.jsp">
               <i class="fa-solid fa-registered"></i> Register
             </a>
+          </div>
         </div>
       </form>
     </nav>

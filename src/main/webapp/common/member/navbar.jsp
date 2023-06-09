@@ -11,11 +11,12 @@
     <head>
         <%@include file="../lib-header.jsp"%>
         <link rel="stylesheet" href="${pageContext.request.contextPath}/vendor/css/navbar.css">
+        <title>Member Navigation Bar</title>
     </head>
     <body>
     <div class="container-fluid">
         <nav class="navbar navbar-light bg-light justify-content-between">
-            <a href="editprofile.html" class="navbar-brand">CMS</a>
+            <a href="home.html" class="navbar-brand">CMS</a>
             <form class="form-inline">
                 <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
