@@ -10,7 +10,7 @@
 <head>
 	<title>Title</title>
 	<%--	library--%>
-	<%@include file="/common/lib-header.jsp" %>
+	<%@include file="/common/lib-header" %>
 </head>
 <body>
 <div class="container-fluid">
