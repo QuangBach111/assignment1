@@ -1,4 +1,5 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="com.example.assignment1.model.Content" %><%--
   Created by IntelliJ IDEA.
   User: buiqu
   Date: 6/9/2023
@@ -12,6 +13,9 @@
 	<%--	library--%>
 	<%@include file="/common/lib-header.jsp" %>
 </head>
+<%
+
+%>
 <body>
 <div class="container-fluid">
 	<%--  Navbar--%>
