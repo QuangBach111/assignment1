@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.example.assignment1.model.User" %><%--
   Created by IntelliJ IDEA.
   User: buiqu
   Date: 6/9/2023
@@ -12,6 +12,9 @@
 	<%--	library--%>
 	<%@include file="/common/lib-header.jsp" %>
 </head>
+<%
+	// show message
+%>
 <body>
 <div class="container-fluid">
 	<%--  Navbar--%>
@@ -25,7 +28,11 @@
 
 		<%--	content-right--%>
 		<div class="col-sm-9">
-
+			<%if (user == null) {%>
+			<h1>No login</h1>
+			<%} else {%>
+			<h2>Login</h2>
+			<%}%>
 		</div>
 	</div>
 </div>

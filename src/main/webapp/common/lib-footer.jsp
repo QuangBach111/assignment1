@@ -8,4 +8,3 @@
 <script src="${pageContext.request.contextPath}/vendor/jquery/jquery.js"></script>
 <script src="${pageContext.request.contextPath}/vendor/bootstrap-4.0.0/js/bootstrap.min.js"></script>
 <script src="${pageContext.request.contextPath}/vendor/bootstrap-4.0.0/js/bootstrap.bundle.min.js"></script>
-<script src="https://kit.fontawesome.com/8be79f5c08.js" crossorigin="anonymous"></script>
