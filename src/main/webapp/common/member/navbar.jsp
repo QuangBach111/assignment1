@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.example.assignment1.model.User" %><%--
   Created by IntelliJ IDEA.
   User: buiqu
   Date: 6/9/2023
@@ -13,11 +13,31 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/vendor/css/navbar.css">
         <title>Member Navigation Bar</title>
     </head>
+    <%
+        User user = (User) session.getAttribute("user");
+    %>
     <body>
     <div class="container-fluid">
         <nav class="navbar navbar-light bg-light justify-content-between">
             <a href="home.html" class="navbar-brand">CMS</a>
             <form class="form-inline">
+                <% if (user == null) { %>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                       aria-expanded="false">
+                        <i class="fa-solid fa-bars"></i> Menu
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" id="loginModalLink" data-toggle="modal" data-target="#loginModal" href="#">
+                            <i class="fa-solid fa-right-to-bracket"></i> Login
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="register.jsp">
+                            <i class="fa-solid fa-registered"></i> Register
+                        </a>
+                    </div>
+                </div>
+                <% } else { %>
                 <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                        aria-expanded="false">
@@ -37,6 +57,7 @@
                         </a>
                     </div>
                 </div>
+                <% } %>
             </form>
         </nav>
     </div>
