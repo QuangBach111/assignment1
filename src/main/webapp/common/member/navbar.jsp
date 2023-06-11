@@ -11,7 +11,7 @@
     <head>
         <%@include file="../lib-header.jsp"%>
         <link rel="stylesheet" href="${pageContext.request.contextPath}/vendor/css/navbar.css">
-        <title>Member Navigation Bar</title>
+        <title>Navigation Bar</title>
     </head>
     <%
         User user = (User) session.getAttribute("user");
@@ -19,7 +19,7 @@
     <body>
     <div class="container-fluid">
         <nav class="navbar navbar-light bg-light justify-content-between">
-            <a href="home.html" class="navbar-brand">CMS</a>
+            <a href="index.jsp" class="navbar-brand">CMS</a>
             <form class="form-inline">
                 <% if (user == null) { %>
                 <div class="nav-item dropdown">
@@ -28,7 +28,7 @@
                         <i class="fa-solid fa-bars"></i> Menu
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" id="loginModalLink" data-toggle="modal" data-target="#loginModal" href="#">
+                        <a class="dropdown-item" href="login.jsp">
                             <i class="fa-solid fa-right-to-bracket"></i> Login
                         </a>
                         <div class="dropdown-divider"></div>
@@ -60,6 +60,7 @@
                 <% } %>
             </form>
         </nav>
+        <div class="modal-content"></div>
     </div>
     <%@include file="../lib-footer.jsp"%>
     </body>
