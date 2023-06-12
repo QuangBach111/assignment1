@@ -34,7 +34,6 @@
 	<%--	Library footer--%>
 	<%@include file="/common/lib-footer.jsp" %>
 
-
 </div>
 </body>
 </html>
