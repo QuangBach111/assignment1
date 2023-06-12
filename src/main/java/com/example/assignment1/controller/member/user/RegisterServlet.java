@@ -1,7 +1,16 @@
 package com.example.assignment1.controller.member.user;
 
+import com.example.assignment1.dao.impl.UserDaoImpl;
+import com.example.assignment1.model.User;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
+@WebServlet(name = "registerServlet", value = "/register-servlet")
 public class RegisterServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
