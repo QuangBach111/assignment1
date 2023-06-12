@@ -12,7 +12,6 @@
 </head>
 <body>
 <% String error = request.getAttribute("error")!=null ? request.getAttribute("error").toString():""; %>
-<% String success = request.getAttribute("success")!=null ? request.getAttribute("success").toString():""; %>
 <div class="wrapper">
     <div class="container-fluid">
         <div class="row justify-content-around">

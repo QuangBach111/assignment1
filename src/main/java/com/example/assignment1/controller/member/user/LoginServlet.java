@@ -23,15 +23,15 @@ public class LoginServlet extends HttpServlet {
 
         if(userDao.checkLoginByUsername(usernameOrEmail, password)){
             req.setAttribute("success", "Login Success");
-            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/index.jsp");
+            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/view/admin/index.jsp");
             requestDispatcher.forward(req, resp);
         } else if(userDao.checkLoginByEmail(usernameOrEmail, password)){
             req.setAttribute("success", "Login Success");
-            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/index.jsp");
+            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/view/admin/index.jsp");
             requestDispatcher.forward(req, resp);
         } else {
             req.setAttribute("error", "Username/email or password is incorrect");
-            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/login.jsp");
+            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/common/member/login.jsp");
             requestDispatcher.forward(req, resp);
         }
     }

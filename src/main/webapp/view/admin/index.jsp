@@ -11,6 +11,6 @@
 	<title>Title</title>
 </head>
 <body>
-  
-  </body>
+ Welcome <% String username = request.getAttribute("username")!=null ? request.getAttribute("success").toString():""; %>
+</body>
 </html>
