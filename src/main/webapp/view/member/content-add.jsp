@@ -14,6 +14,8 @@
 </head>
 <%
 	// show message
+	String messageError = (String) request.getAttribute("messageError");
+	String messageSuccess = (String) request.getAttribute("messageSuccess");
 %>
 <body>
 <div class="container-fluid">
@@ -28,11 +30,28 @@
 
 		<%--	content-right--%>
 		<div class="col-sm-9">
-			<%if (user == null) {%>
-			<h1>No login</h1>
-			<%} else {%>
-			<h2>Login</h2>
-			<%}%>
+			<h2>From</h2>
+			<%
+				if (messageError != null) {
+			%>
+			<p class="text-danger">
+				<%=messageError%>
+			</p>
+			<%
+				}
+			%>
+			<%
+				if(messageSuccess != null) {
+			%>
+			<p class="text-success">
+				<%=messageSuccess%>
+			</p>
+			<%
+				}
+			%>
+			<form action="">
+
+			</form>
 		</div>
 	</div>
 </div>
