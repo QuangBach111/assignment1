@@ -9,6 +9,15 @@
 <html>
 <head>
 	<title>Title</title>
+    <%@include file="/common/lib-header.jsp"%>
+    <script>
+        window.onload = function() {
+            let successMessage = "${requestScope.success}";
+            if (successMessage) {
+                alert(successMessage);
+            }
+        };
+    </script>
 </head>
 <body>
  Welcome <% String username = request.getAttribute("username")!=null ? request.getAttribute("success").toString():""; %>

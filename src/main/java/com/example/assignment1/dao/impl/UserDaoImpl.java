@@ -51,4 +51,57 @@ public class UserDaoImpl implements UserDao {
         }
         return result;
     }
+
+    @Override
+    public User getUserByUsername(String username) {
+        User user = null;
+        try{
+            String query = "SELECT id, user_name, email FROM users WHERE user_name = '"+ username +"'";
+            Statement statement = database.getConn().createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+               String userName = resultSet.getString("user_name");
+               String email = resultSet.getString("email");
+               user = new User(id, userName, email);
+            }
+        } catch (SQLException e) {
+            Logger.getLogger(UserDao.class.getName()).log(Level.SEVERE, null, e);
+        }
+        return user;
+    }
+
+    @Override
+    public User getUserByEmail(String email) {
+        User user = null;
+        try {
+            String query = "SELECT id, user_name, email FROM users WHERE email = '" + email + "'";
+            Statement statement = database.getConn().createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            if (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String username = resultSet.getString("user_name");
+                String userEmail = resultSet.getString("email");
+                user = new User( id,username,userEmail);
+            }
+            statement.close();
+        } catch (SQLException e) {
+            Logger.getLogger(UserDao.class.getName()).log(Level.SEVERE, null, e);
+        }
+        return user;
+    }
+
+    @Override
+    public Boolean saveUser(User user) {
+        try {
+            String query = "INSERT INTO users (user_name, email, password) VALUES ('" + user.getUsername() + "', '" + user.getEmail() + "', '" + user.getPassword() + "')";
+            Statement statement = database.getConn().createStatement();
+            int numRowsAffected = statement.executeUpdate(query);
+            statement.close();
+            return numRowsAffected > 0;
+        } catch (SQLException e) {
+            Logger.getLogger(UserDao.class.getName()).log(Level.SEVERE, null, e);
+            return false;
+        }
+    }
 }

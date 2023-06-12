@@ -30,9 +30,8 @@
                                        maxlength="30" required>
                             </div>
                             <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" name="signInRemember"
-                                       id="signInRemember">
-                                <label for="signInRemember" class="form-check-label">Remember me</label>
+                                <input type="checkbox" id="rememberMe" name="rememberMe">
+                                <label for="rememberMe">Remember Me</label>
                             </div>
                             <div>
                                 <span class="text-danger"><%=error%></span>
