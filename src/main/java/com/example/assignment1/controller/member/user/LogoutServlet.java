@@ -14,6 +14,6 @@ public class LogoutServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getSession().invalidate();
-        response.sendRedirect("http://localhost");
+        response.sendRedirect("http://localhost:8081/assignment1_war_exploded/common/member/navbar.jsp");
     }
 }

@@ -52,7 +52,7 @@
                             <i class="fa-solid fa-pen-to-square"></i> Edit Profile
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" onclick="removeSessionValue()" id="logoutLink" href="http://localhost:8081/assignment1_war_exploded/logout-servlet" >
+                        <a class="dropdown-item" onclick="submitForm()" id="logoutLink" >
                             <i class="fa-solid fa-right-from-bracket"></i> Logout
                         </a>
                     </div>
